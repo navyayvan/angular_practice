@@ -3,6 +3,8 @@
 <head>
   <title>Yup</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.js'></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -18,12 +20,14 @@
     <ul>
       <li ng-repeat='(key,value) in objectList'> My {{key}} is {{value}}</li>
     </ul>
-
+    <div ng-include="'./views/navbar.html'"></div>
     <form ng-submit='submitList()'>
       <input type='text' ng-model='listitem'>
       <input type='submit'>
     </form>
   </div>
+
+  <button type='button' class='btn btn-default' ng-click='open()'> Open the modal! </button>
 <script src='app.js'></script>
 </body>
 </html>
