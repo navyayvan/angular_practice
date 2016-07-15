@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='funkyPage'>
+<head>
+  <title>Yup</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div ng-controller='Ctrl1'>
+    {{var1}} 
+    <input type='text' ng-model='var1'>
+    <button ng-click='toggleClick()'> ngclick example </button>
+    <p> {{clickthing}}</p>
+    <ul>
+      <li ng-repeat='item in list | limitTo:5 track by $index'> {{item}} </li>
+    </ul>
+    
+    <ul>
+      <li ng-repeat='(key,value) in objectList'> My {{key}} is {{value}}</li>
+    </ul>
+
+    <form ng-submit='submitList()'>
+      <input type='text' ng-model='listitem'>
+      <input type='submit'>
+    </form>
+  </div>
+<script src='app.js'></script>
+</body>
+</html>
+
